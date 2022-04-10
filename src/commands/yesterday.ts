@@ -1,12 +1,7 @@
 import {Command, Flags} from '@oclif/core';
 import * as inquirer from 'inquirer';
-import Airtable from 'airtable';
+import {base} from '../utils/base';
 import {exec} from 'child_process';
-import path from 'path';
-import dotenv from 'dotenv';
-
-dotenv.config({path: path.join(__dirname, '../../.env')});
-const base = new Airtable({apiKey: process.env.API_KEY}).base('app4Eb0X39KtGToOS');
 
 export default class Yesterday extends Command {
     static description =

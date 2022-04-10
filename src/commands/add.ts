@@ -1,13 +1,7 @@
 import {Command} from '@oclif/core';
 import * as inquirer from 'inquirer';
 import moment from 'moment';
-import Airtable from 'airtable';
-import {exec} from 'child_process';
-import path from 'path';
-import dotenv from 'dotenv';
-
-dotenv.config({path: path.join(__dirname, '../../.env')});
-const base = new Airtable({apiKey: process.env.API_KEY}).base('app4Eb0X39KtGToOS');
+import {base} from '../utils/base';
 
 const addEventQuestions = [
     {
@@ -96,7 +90,7 @@ export default class Add extends Command {
                         console.log(err);
                         return;
                     }
-                    console.log(`Succesfully added act to event. Now fuck off.`);
+                    console.log(`Successfully added act to event. Now fuck off.`);
                 }
             );
         }
@@ -143,7 +137,7 @@ export default class Add extends Command {
                     return;
                 }
                 console.log(
-                    'Succesfully created a new act, added it to the database, and linked to to the event.  Now fuck off'
+                    'Successfully created a new act, added it to the database, and linked to to the event.  Now fuck off'
                 );
             }
         );

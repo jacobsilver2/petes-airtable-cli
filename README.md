@@ -29,8 +29,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`petes hello PERSON`](#petes-hello-person)
-* [`petes hello world`](#petes-hello-world)
+* [`petes add`](#petes-add)
 * [`petes help [COMMAND]`](#petes-help-command)
 * [`petes plugins`](#petes-plugins)
 * [`petes plugins:install PLUGIN...`](#petes-pluginsinstall-plugin)
@@ -41,46 +40,21 @@ USAGE
 * [`petes plugins:uninstall PLUGIN...`](#petes-pluginsuninstall-plugin-1)
 * [`petes plugins:uninstall PLUGIN...`](#petes-pluginsuninstall-plugin-2)
 * [`petes plugins update`](#petes-plugins-update)
+* [`petes yesterday`](#petes-yesterday)
 
-## `petes hello PERSON`
+## `petes add`
 
-Say hello
-
-```
-USAGE
-  $ petes hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Whom is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/jacobsilver2/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `petes hello world`
-
-Say hello world
+add an act
 
 ```
 USAGE
-  $ petes hello world
+  $ petes add
 
 DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ oex hello world
-  hello world! (./src/commands/hello/world.ts)
+  add an act
 ```
+
+_See code: [dist/commands/add.ts](https://github.com/jacobsilver2/hello-world/blob/v0.0.0/dist/commands/add.ts)_
 
 ## `petes help [COMMAND]`
 
@@ -331,4 +305,21 @@ FLAGS
 DESCRIPTION
   Update installed plugins.
 ```
+
+## `petes yesterday`
+
+list events from yesterday and add draw and notes, or email with mail flag
+
+```
+USAGE
+  $ petes yesterday [-m]
+
+FLAGS
+  -m, --mail  send email with notes
+
+DESCRIPTION
+  list events from yesterday and add draw and notes, or email with mail flag
+```
+
+_See code: [dist/commands/yesterday.ts](https://github.com/jacobsilver2/hello-world/blob/v0.0.0/dist/commands/yesterday.ts)_
 <!-- commandsstop -->
